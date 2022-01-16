@@ -24,34 +24,14 @@ class ViewController: UIViewController {
         
         activityIndicator.startAnimating()
         
+        reloadInputViews()
         
-        guard let url = URL(string: link) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do {
-                let dog = try JSONDecoder().decode(Dog.self, from: data)
-                DispatchQueue.global().async {
-                    guard let url = URL(string: dog.url) else { return }
-                    guard let imageData = try? Data(contentsOf: url) else { return }
-                    
-                    DispatchQueue.main.async {
-                        self.reloadInputViews()
-                        self.dogImage.image = UIImage(data: imageData)
-                        self.activityIndicator.stopAnimating()
-                    }
-                }
-                print(dog)
-            } catch {
-                print(error.localizedDescription)
-            }
-            
-        }.resume()
+        NetworkingManager.shared.getDogImage { imageData in
+            self.dogImage.image = UIImage(data: imageData)
+        }
         
     }
-    
+        
 }
+    
+
