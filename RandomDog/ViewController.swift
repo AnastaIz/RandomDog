@@ -10,22 +10,21 @@ import UIKit
 let link = "https://random.dog/woof.json"
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.isHidden = true
+        activityIndicator.hidesWhenStopped = true
         
     }
-
+    
     @IBAction func getADogButton(_ sender: UIButton) {
         
         activityIndicator.startAnimating()
-        activityIndicator.hidesWhenStopped = true
         
-      
+        
         guard let url = URL(string: link) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -50,14 +49,9 @@ class ViewController: UIViewController {
             } catch {
                 print(error.localizedDescription)
             }
-
+            
         }.resume()
         
-            
-        
-        
     }
-    
-    
     
 }
