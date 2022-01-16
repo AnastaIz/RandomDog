@@ -13,6 +13,8 @@
 		A9C22797279450650011536F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C22795279450650011536F /* Main.storyboard */; };
 		A9C22799279450670011536F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C22798279450670011536F /* Assets.xcassets */; };
 		A9C2279C279450670011536F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C2279A279450670011536F /* LaunchScreen.storyboard */; };
+		A9C227A42794569B0011536F /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C227A32794569B0011536F /* Dog.swift */; };
+		A9C227A6279456EA0011536F /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C227A5279456EA0011536F /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A9C22798279450670011536F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9C2279B279450670011536F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9C2279D279450670011536F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C227A32794569B0011536F /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		A9C227A5279456EA0011536F /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				A9C2278F279450650011536F /* AppDelegate.swift */,
 				A9C22791279450650011536F /* SceneDelegate.swift */,
 				A9C22793279450650011536F /* ViewController.swift */,
+				A9C227A32794569B0011536F /* Dog.swift */,
+				A9C227A5279456EA0011536F /* NetworkingManager.swift */,
 				A9C22795279450650011536F /* Main.storyboard */,
 				A9C22798279450670011536F /* Assets.xcassets */,
 				A9C2279A279450670011536F /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				A9C22794279450650011536F /* ViewController.swift in Sources */,
 				A9C22790279450650011536F /* AppDelegate.swift in Sources */,
+				A9C227A42794569B0011536F /* Dog.swift in Sources */,
+				A9C227A6279456EA0011536F /* NetworkingManager.swift in Sources */,
 				A9C22792279450650011536F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
